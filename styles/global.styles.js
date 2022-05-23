@@ -39,30 +39,5 @@ export default StyleSheet.create({
   },
 
   /** Components */
-  modal: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-  },
-  modalContainer: {
-  width: '100%',
-   marginHorizontal: 20,
-   backgroundColor: '#fff',
-   shadowColor: 'rgba(0,0,0,0.2)',
-   shadowOffset: {width: 1, height: 1},
-   shadowRadius: 4,
-   shadowOpacity: '1',
-   elevation: 3
-  },
-  modalHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-  },
-  modalBody: {
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-  }
+  
 })
