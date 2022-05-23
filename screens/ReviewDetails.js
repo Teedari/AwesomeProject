@@ -20,9 +20,9 @@ const ReviewDetails = ({ route, navigation }) => {
           .fill()
           .map((_, index) => {
             return index <= data?.rating ? (
-              <MaterialIcons key={index} color="#00B677" size='50' name="favorite" />
+              <MaterialIcons key={index} color="#00B677" size={20} name="favorite" />
             ) : (
-              <MaterialIcons key={index} name="favorite" size='50' color="#333" />
+              <MaterialIcons key={index} name="favorite" size={20} color="#333" />
             );
           })}
       </View>
