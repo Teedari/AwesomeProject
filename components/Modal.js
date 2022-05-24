@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, Text, View, StyleSheet } from "react-native";
+import { Modal, Text, View, StyleSheet, TouchableWithoutFeedback, Keyboard } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import globalStyles from "../styles/global.styles";
 
@@ -11,21 +11,23 @@ const CustomModal = ({isVisible=false, onHide, title, children}) => {
       animationType="fade"
       presentationStyle="overFullScreen"
       transparent={true}>
-      <View style={styles.modal}>
-        <View style={styles.modalContainer}>
-          <View style={styles.modalHeader}>
-            <Text style={globalStyles.h3}>{title}</Text>
-            <MaterialIcons
-              onPress={() => onHide()}
-              name="close"
-              size={20}
-            />
-          </View>
-          <View style={styles.modalBody}>
-           {children}
+      <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+        <View style={styles.modal}>
+          <View style={styles.modalContainer}>
+            <View style={styles.modalHeader}>
+              <Text style={globalStyles.h3}>{title}</Text>
+              <MaterialIcons
+                onPress={() => onHide()}
+                name="close"
+                size={20}
+              />
+            </View>
+            <View style={styles.modalBody}>
+            {children}
+            </View>
           </View>
         </View>
-      </View>
+      </TouchableWithoutFeedback>
     </Modal>
   );
 };
@@ -35,9 +37,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 20,
+    backgroundColor: 'rgba(0,0,0,0.3)'
   },
   modalContainer: {
     width: "100%",
+    borderRadius: 10,
     marginHorizontal: 20,
     backgroundColor: "#fff",
     shadowColor: "rgba(0,0,0,0.2)",

@@ -18,26 +18,39 @@ export default StyleSheet.create({
     fontSize: 13
   },
   h1: {
-    lineHeight: 30,
+    paddingVertical: 10,
     fontSize: 21,
     fontWeight: '700',
   },
   h2: {
-    lineHeight: 30,
+    paddingVertical: 10,
     fontSize: 18,
     fontWeight: '700',
   },
   h3: {
-    lineHeight: 30,
+    paddingVertical: 10,
     fontSize: 15,
     fontWeight: '700',
   },
   h4: {
-    lineHeight: 30,
+    paddingVertical: 10,
     fontSize: 12,
     fontWeight: '700',
   },
 
   /** Components */
-  
+  formGroup: {
+    marginBottom: 20
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    paddingVertical: 10,
+    paddingHorizontal: 15
+  },
+  inputTextArea: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    paddingVertical: 30,
+  }
 })
